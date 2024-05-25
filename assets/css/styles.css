@@ -1,0 +1,120 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('../fonts/NeueRegular.otf');
+    font-weight: normal;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Neue Montreal';
+}
+
+
+.hero {
+    width: 100vw;
+    height: calc(100vh - 20px);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    border-bottom: 5px solid black;
+}
+
+#hero-line {
+    position: absolute;
+    width: 100vw;
+    height: 14px;
+    border-bottom: 5px solid black;
+}
+
+#hero-name {
+    font-size: max(3vw, 80px);
+    line-height: 0.9;
+
+    margin-left: 4vh;
+    margin-top: calc(4vh + 10px);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#hero-star {
+    width: 50px;
+    height: 50px;
+    user-select: none;
+
+    position: absolute;
+    top: calc(2*max(3vw, 80px) + 6vh + 10px);
+    left: 4vh;
+
+    animation: spin 20s linear infinite;
+
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    pointer-events: none;
+
+}
+
+#hero-text {
+    font-size: 30px;
+    position: absolute;
+    left: 4vh;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+#hero-scroll {
+    font-size: 25px;
+    position: absolute;
+    left: 4vh;
+    bottom: 50px;
+}
+
+
+.content {
+    margin: 6vh;
+}
+
+.content h1 {
+    font-size: 50px;
+}
+
+#design img {
+    height: calc(88vh/3);
+}
+
+#about {
+    margin-top: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;
+}
